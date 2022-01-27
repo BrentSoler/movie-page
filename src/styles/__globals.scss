@@ -1,0 +1,9 @@
+$e-light: 200;
+$light: 300;
+$med: 400;
+$bold: 600;
+
+@mixin flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
