@@ -67,7 +67,7 @@ function MoviePageCard() {
 			<div className="movie-page-card">
 				{title && plot && img ? (
 					<div className="">
-						<Link to={`/search/discover/1`}>
+						<Link to={`/search/discover/1`} className="link">
 							<button className="btn--page__movie">
 								{`<<`}
 								<span>Go back to search</span>

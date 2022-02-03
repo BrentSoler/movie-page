@@ -8,8 +8,8 @@ function Jumbo() {
 		<div className="jumbo-container">
 			<div className="jumbo__content">
 				<div className="jumbo--text">
-					<h1 className="main__text">Lorem ipsum dolor sit amet.</h1>
-					<h3 className="sub__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse recusandae maxime atque.</h3>
+					<h1 className="main__text">Discover & Search for Movies</h1>
+					<h3 className="sub__text">The cinema has no boundary.it is a ribbon of dream</h3>
 				</div>
 				<Input />
 			</div>

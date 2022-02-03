@@ -195,6 +195,10 @@
           box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
 }
 
+.link {
+  text-decoration: none;
+}
+
 .btn--page__movie {
   --gap: 0.3rem;
   position: relative;
