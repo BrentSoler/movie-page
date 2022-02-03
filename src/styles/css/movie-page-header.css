@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;600&display=swap");
+.main-header[data-page="page"],
+.main-header[data-page="search"] {
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+          box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+}
+
+.main-header[data-page="page"] li,
+.main-header[data-page="search"] li {
+  color: black;
+}
+
+.main-header[data-page="page"] .main-navbar,
+.main-header[data-page="search"] .main-navbar {
+  color: black;
+}
+
+.main-header[data-page="page"] .hamburger .mainburger,
+.main-header[data-page="search"] .hamburger .mainburger {
+  background-color: black;
+}
+
+.main-header[data-page="page"] .hamburger::before,
+.main-header[data-page="page"] .hamburger::after,
+.main-header[data-page="search"] .hamburger::before,
+.main-header[data-page="search"] .hamburger::after {
+  background: black;
+}
+
+/*
+*   Main Style
+*/
+.movie-page--card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins";
+  color: white;
+  --gap: 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: radial-gradient(circle at 0% 0%, #1b90a0 0%, rgba(73, 10, 115, 0.87) 22%, #490a73 57%, #490a73 75%);
+}
+
+.movie-page--card .movie-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  --gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: #992f9791;
+  width: 80%;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  -webkit-box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+          box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+}
+
+.movie-page--card .plot-container {
+  margin-top: 1rem;
+}
+
+.movie-page--card .plot-container p {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.movie-page--card .movie-card__frow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.movie-page--card .movie-card__frow .movie-card__img-container {
+  width: 15rem;
+  height: auto;
+}
+
+.movie-page--card .movie-card__frow .movie-card__img-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  --gap: 0.2rem;
+}
+
+.movie-page--card .movie-card__frow .movie-card__img-container img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.541);
+          box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.541);
+  border: solid 2px white;
+}
+
+.movie-page--card .movie-card__frow .ratings {
+  font-weight: 300;
+}
+
+.movie-page--card .movie-card__frow .movie-card__text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.movie-page--card .movie-card__frow .genre-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movie-page--card .movie-card__frow .genre {
+  font-weight: 300;
+  border: 1px solid white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.simmilar {
+  width: 100%;
+  justify-self: flex-start;
+}
+
+.connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  --gap: 2rem;
+}
+
+.suggestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  margin-bottom: 3rem;
+  --gap: 1rem;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: #992f9791;
+  width: 80%;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  -webkit-box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+          box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+}
+
+.btn--page__movie {
+  --gap: 0.3rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 0.1rem;
+  top: 0;
+  padding: 0 0.8rem;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.btn--page__movie span {
+  font-weight: 300;
+  font-size: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.btn--page__movie:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=movie-page-header.css.map */

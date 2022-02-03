@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;600&display=swap");
+.movies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  background: radial-gradient(circle at 0% 0%, #1b90a0 0%, rgba(73, 10, 115, 0.87) 32%, #490a73 57%, #490a73 75%);
+  font-family: "Poppins", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0 6rem 0;
+  color: white;
+}
+
+.movies-container .movies-container__flex {
+  background-color: #992f97b7;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  padding: 2rem;
+  width: 70%;
+  -webkit-box-shadow: 0 0.1rem 1.5rem 0.3rem rgba(0, 0, 0, 0.507);
+          box-shadow: 0 0.1rem 1.5rem 0.3rem rgba(0, 0, 0, 0.507);
+  border-radius: 1.5rem;
+}
+
+.movies-container .movies-container__flex h1 {
+  margin-bottom: 1rem;
+}
+
+.movies-container .movie__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  --gap: 1rem;
+}
+
+.movie-card {
+  font-family: "Poppins";
+  color: white;
+  text-decoration: none;
+}
+
+.movie-card .movie-card--content {
+  width: 15rem;
+  cursor: pointer;
+  height: 22rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.1rem 0.5rem 0.4rem rgba(0, 0, 0, 0.281);
+          box-shadow: 0 0.1rem 0.5rem 0.4rem rgba(0, 0, 0, 0.281);
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-card .movie-card--content img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie-card .movie-card--content .movie-card--content__text {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
+  bottom: 0%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+.movie-card .movie-card--content .movie--release-date {
+  font-size: 0.9rem;
+  visibility: hidden;
+}
+
+.movie-card .movie-card--content .movie--ratings {
+  visibility: hidden;
+}
+
+.movie-card:hover .movie-card--content__text {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.movie-card:hover .movie--release-date,
+.movie-card:hover .movie--ratings {
+  visibility: visible;
+}
+/*# sourceMappingURL=movies.css.map */

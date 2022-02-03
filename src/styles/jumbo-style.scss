@@ -1,0 +1,123 @@
+@import "./_globals";
+
+.gradient__bg {
+	position: relative;
+	z-index: 2;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.719) 60%, rgba(5, 5, 5, 0.219)), url("/src/images/background.jpg");
+	box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.692);
+}
+
+.jumbo-container {
+	color: white;
+	width: 100%;
+	@include flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 0 4rem;
+	.jumbo--text {
+		margin-left: 2rem;
+		max-width: 100%;
+		font-family: "Poppins", sans-serif;
+
+		.main__text {
+			width: fit-content;
+			background: linear-gradient(89deg, rgba(43, 150, 217, 1) 0%, rgb(124, 0, 248) 90%);
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			background-size: contain;
+			background-size: 100%;
+			background-repeat: repeat;
+
+			font-family: "Bebas Neue", sans-serif;
+			font-size: 5rem;
+		}
+
+		.sub__text {
+			line-height: 1.7rem;
+			font-weight: $light;
+			font-size: 1.3rem;
+		}
+	}
+
+	.home-input {
+		@include flex;
+		margin: 3rem 2rem;
+		align-content: center;
+		--gap: 0rem;
+
+		.home__search {
+			font-family: "Poppins", sans-serif;
+			height: 2.7rem;
+			min-width: 10rem;
+			width: 100%;
+			font-size: 1.2rem;
+			background: transparent;
+			border: none;
+
+			background-color: rgba(255, 255, 255, 0.582);
+			border-radius: 0.5rem 0 0 0.5rem;
+			padding-left: 0.5rem;
+			border-bottom: #2b96d9 3.5px solid;
+		}
+
+		.home__btn {
+			cursor: pointer;
+			align-self: center;
+			font-family: "Poppins", sans-serif;
+			height: 2.9rem;
+			font-size: 1.2rem;
+			font-weight: $bold;
+			text-align: center;
+			background-color: #2b96d9;
+			color: white;
+			width: 6rem;
+			border-radius: 0 0.5rem 0.5rem 0;
+			border: #2b96d9 1px solid;
+		}
+
+		.home__btn:hover,
+		.home__btn:hover .home__search {
+			border: #3c87d2 1px solid;
+			background-color: #3c87d2;
+		}
+	}
+}
+/*
+*	MEDIA QUERIES JUMBO
+*/
+
+@media (max-width: 40em) {
+	.jumbo-container {
+		.jumbo--text {
+			max-width: 100%;
+			.main__text {
+				font-size: 3rem;
+			}
+			.sub__text {
+				font-size: 1.2rem;
+			}
+		}
+
+		.home-input {
+			.home__btn {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+@media (max-width: 24em) {
+	.jumbo-container {
+		.jumbo--text {
+			margin: 0.5rem;
+		}
+
+		.home-input {
+			margin: 3rem 0.5rem;
+		}
+	}
+}

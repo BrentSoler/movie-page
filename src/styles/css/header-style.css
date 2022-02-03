@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;600&display=swap");
+.line {
+  text-decoration: none;
+}
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  font-family: "Poppins", sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 350 ease-in-out;
+  transition: all 350 ease-in-out;
+}
+
+.main-header .logo {
+  font-family: "Bebas Neue";
+  margin: 1.5rem;
+  font-size: 1.4rem;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.main-header .logo .link {
+  text-decoration: none;
+  color: #2b96d9;
+}
+
+.main-header .main-burger {
+  visibility: hidden;
+}
+
+.main-header .main-navbar {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.2rem;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.main-header .main-navbar li {
+  color: white;
+  text-decoration: none;
+}
+
+.main-header[data-header="true"] {
+  position: fixed;
+  background-color: white;
+  -webkit-box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.main-header[data-header="true"] .logo {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.main-header[data-header="true"] .main-navbar {
+  color: black;
+  font-size: 1rem;
+}
+
+.main-header[data-header="true"] .main-navbar li {
+  color: black;
+}
+
+/*
+*	MediaQuery HEADER
+*/
+@media (max-width: 40em) {
+  .main-header .main-navbar {
+    color: white;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    inset: 0 0 0 40%;
+    padding: min(30vh,20rem)1em;
+    margin-right: 0rem;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    background-color: rgba(216, 215, 215, 0.466);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 350ms ease-out;
+    transition: -webkit-transform 350ms ease-out;
+    transition: transform 350ms ease-out;
+    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+  }
+  .main-header .main-navbar li {
+    color: black;
+  }
+  .main-header .main-navbar[data-toggled="true"] {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .main-header .hamburger {
+    visibility: visible;
+    z-index: 99;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 1.3rem;
+    height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--gap, 1rem);
+    right: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .main-header .hamburger .mainburger {
+    height: 0.2rem;
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    border-radius: 2rem;
+    background-color: white;
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+  }
+  .main-header .hamburger::before,
+  .main-header .hamburger::after {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 0.2rem;
+    width: 100%;
+    border-radius: 2rem;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 350ms ease-in-out;
+    transition: -webkit-transform 350ms ease-in-out;
+    transition: transform 350ms ease-in-out;
+    transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  }
+  .main-header .hamburger[data-toggled="true"] .mainburger {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  .main-header .hamburger::before {
+    -webkit-transform: translateY(-0.4rem);
+            transform: translateY(-0.4rem);
+  }
+  .main-header .hamburger::after {
+    -webkit-transform: translateY(0.4rem);
+            transform: translateY(0.4rem);
+  }
+  .main-header .hamburger[data-toggled="true"]::before {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+  }
+  .main-header .hamburger[data-toggled="true"]::after {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+  .main-header[data-header="true"] .main-navbar {
+    color: white;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    inset: 0 0 0 40%;
+    padding: min(40vh,20rem)1em;
+    margin-right: 0rem;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    background-color: rgba(216, 215, 215, 0.466);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 350ms ease-out;
+    transition: -webkit-transform 350ms ease-out;
+    transition: transform 350ms ease-out;
+    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+  }
+  .main-header[data-header="true"] .main-navbar[data-toggled="true"] {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .main-header[data-header="true"] .hamburger {
+    visibility: visible;
+    z-index: 99;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 1.3rem;
+    height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--gap, 1rem);
+    right: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .main-header[data-header="true"] .hamburger .mainburger {
+    height: 0.2rem;
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    border-radius: 2rem;
+    background-color: black;
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+  }
+  .main-header[data-header="true"] .hamburger::before,
+  .main-header[data-header="true"] .hamburger::after {
+    content: "";
+    background: black;
+    position: absolute;
+    height: 0.2rem;
+    width: 100%;
+    border-radius: 2rem;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 350ms ease-in-out;
+    transition: -webkit-transform 350ms ease-in-out;
+    transition: transform 350ms ease-in-out;
+    transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  }
+  .main-header[data-header="true"] .hamburger[data-toggled="true"] .mainburger {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  .main-header[data-header="true"] .hamburger::before {
+    -webkit-transform: translateY(-0.4rem);
+            transform: translateY(-0.4rem);
+  }
+  .main-header[data-header="true"] .hamburger::after {
+    -webkit-transform: translateY(0.4rem);
+            transform: translateY(0.4rem);
+  }
+  .main-header[data-header="true"] .hamburger[data-toggled="true"]::before {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+  }
+  .main-header[data-header="true"] .hamburger[data-toggled="true"]::after {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+}
+/*# sourceMappingURL=header-style.css.map */

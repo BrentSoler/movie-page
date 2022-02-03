@@ -1,0 +1,208 @@
+@import "./_globals";
+
+.line {
+	text-decoration: none;
+}
+
+.main-header {
+	@include flex;
+	position: relative;
+	width: 100%;
+	top: 0;
+	z-index: 4;
+	font-family: "Poppins", sans-serif;
+	justify-content: space-between;
+	.logo {
+		.link {
+			text-decoration: none;
+			color: #2b96d9;
+		}
+
+		font-family: "Bebas Neue";
+		margin: 1.5rem;
+		font-size: 1.4rem;
+		transition: all 350ms ease-out;
+	}
+	.main-burger {
+		visibility: hidden;
+	}
+	.main-navbar {
+		color: white;
+		@include flex;
+		align-self: center;
+		margin-right: 1.5rem;
+		text-decoration: none;
+		li {
+			color: white;
+			text-decoration: none;
+		}
+		list-style: none;
+		font-size: 1.2rem;
+		transition: all 350ms ease-out;
+	}
+	transition: all 350 ease-in-out;
+}
+.main-header[data-header="true"] {
+	position: fixed;
+	background-color: white;
+	box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+	.logo {
+		margin: 1rem;
+		font-size: 1.2rem;
+	}
+	.main-navbar {
+		color: black;
+		font-size: 1rem;
+		li {
+			color: black;
+		}
+	}
+}
+/*
+*	MediaQuery HEADER
+*/
+@media (max-width: 40em) {
+	.main-header {
+		.main-navbar {
+			color: white;
+			position: fixed;
+			flex-direction: column;
+			inset: 0 0 0 40%;
+			li {
+				color: black;
+			}
+			padding: #{"min(30vh,20rem)1em"};
+			margin-right: 0rem;
+			backdrop-filter: blur(1rem);
+			background-color: rgba(216, 215, 215, 0.466);
+			transform: translateX(100%);
+			transition: transform 350ms ease-out;
+		}
+		.main-navbar[data-toggled="true"] {
+			transform: translateX(0);
+		}
+
+		.hamburger {
+			visibility: visible;
+			z-index: 99;
+			position: absolute;
+			align-self: center;
+			justify-content: center;
+			width: 1.3rem;
+			height: 1.2rem;
+			@include flex;
+			right: 1rem;
+			align-items: center;
+			overflow: hidden;
+			.mainburger {
+				height: 0.2rem;
+				width: 100%;
+				align-self: center;
+				justify-self: center;
+				border-radius: 2rem;
+				background-color: rgb(255, 255, 255);
+				transition: all 350ms ease-in-out;
+			}
+		}
+		.hamburger::before,
+		.hamburger::after {
+			content: "";
+			background: rgb(255, 255, 255);
+			position: absolute;
+			height: 0.2rem;
+			width: 100%;
+			border-radius: 2rem;
+			transform: rotate(0deg);
+			transition: transform 350ms ease-in-out;
+		}
+
+		.hamburger[data-toggled="true"] .mainburger {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		.hamburger::before {
+			transform: translateY(-0.4rem);
+		}
+
+		.hamburger::after {
+			transform: translateY(0.4rem);
+		}
+
+		.hamburger[data-toggled="true"]::before {
+			transform: rotate(50deg);
+		}
+		.hamburger[data-toggled="true"]::after {
+			transform: rotate(-50deg);
+		}
+	}
+	.main-header[data-header="true"] {
+		.main-navbar {
+			color: rgb(255, 255, 255);
+			position: fixed;
+			flex-direction: column;
+			inset: 0 0 0 40%;
+			padding: #{"min(40vh,20rem)1em"};
+			margin-right: 0rem;
+			backdrop-filter: blur(1rem);
+			background-color: rgba(216, 215, 215, 0.466);
+			transform: translateX(100%);
+			transition: transform 350ms ease-out;
+		}
+		.main-navbar[data-toggled="true"] {
+			transform: translateX(0);
+		}
+
+		.hamburger {
+			visibility: visible;
+			z-index: 99;
+			position: absolute;
+			align-self: center;
+			justify-content: center;
+			width: 1.3rem;
+			height: 1.2rem;
+			@include flex;
+			right: 1rem;
+			align-items: center;
+			overflow: hidden;
+			.mainburger {
+				height: 0.2rem;
+				width: 100%;
+				align-self: center;
+				justify-self: center;
+				border-radius: 2rem;
+				background-color: rgb(0, 0, 0);
+				transition: all 350ms ease-in-out;
+			}
+		}
+		.hamburger::before,
+		.hamburger::after {
+			content: "";
+			background: rgb(0, 0, 0);
+			position: absolute;
+			height: 0.2rem;
+			width: 100%;
+			border-radius: 2rem;
+			transform: rotate(0deg);
+			transition: transform 350ms ease-in-out;
+		}
+
+		.hamburger[data-toggled="true"] .mainburger {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		.hamburger::before {
+			transform: translateY(-0.4rem);
+		}
+
+		.hamburger::after {
+			transform: translateY(0.4rem);
+		}
+
+		.hamburger[data-toggled="true"]::before {
+			transform: rotate(50deg);
+		}
+		.hamburger[data-toggled="true"]::after {
+			transform: rotate(-50deg);
+		}
+	}
+}
