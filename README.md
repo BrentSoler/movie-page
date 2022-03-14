@@ -5,4 +5,4 @@
 <b>API used:</b> The Movies DB API<br><br>
 
 <b>Status:</b> DONE <br>
-<b>Visit Site Here:</b> viedb-ph.netlify.app
+<b>Visit Site Here:</b> moviedb-ph.netlify.app
